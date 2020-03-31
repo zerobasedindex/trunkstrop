@@ -1,0 +1,43 @@
+apply from: scripts.module
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+
+    defaultConfig {
+        minSdkVersion 23
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // Retrofit
+    api deps.retrofit
+    api deps.retrofitMoshi
+    api deps.retrofitRx
+
+    // ok*
+    api deps.okhttp
+    debugApi deps.okhttpInterceptor
+    api deps.okio
+
+    // Moshi
+    api deps.moshi
+    kapt deps.moshiCodegen
+
+    // Date
+    api deps.andrThreetenbp
+    testImplementation deps.threetenbp
+
+    // Rx
+    api deps.rxjava
+    api deps.rxkotlin
+    api deps.rxandroid
+}

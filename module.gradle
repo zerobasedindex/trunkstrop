@@ -1,0 +1,45 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+apply from: scripts.deps
+
+android {
+    compileSdkVersion targetSdk
+
+    defaultConfig {
+        minSdkVersion minSdk
+        targetSdkVersion targetSdk
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        debug {
+
+        }
+
+        release {
+
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+dependencies {
+    implementation deps.kotlinstdlib
+    implementation deps.andrxAppCompat
+    implementation deps.andrxCore
+    testImplementation deps.junit
+    androidTestImplementation deps.andrxJunit
+    androidTestImplementation deps.andrxEspresso
+}

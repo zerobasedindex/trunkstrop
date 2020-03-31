@@ -1,0 +1,9 @@
+ext {
+    minSdk = 23
+    targetSdk = 29
+
+    scripts = [
+        deps: "$rootDir/deps.gradle",
+        module: "$rootDir/module.gradle",
+    ]
+}

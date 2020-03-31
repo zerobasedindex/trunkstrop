@@ -1,0 +1,43 @@
+ext {
+
+    versions = [
+        okhttp   : "4.3.1",
+        okio     : "2.4.3",
+        moshi    : "1.9.2",
+        picasso  : "2.71828",
+        retrofit : "2.7.1",
+    ]
+
+    deps = [
+        // Kotlin
+        kotlinstdlib: "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
+
+        // Android
+        andrxAppCompat: 'androidx.appcompat:appcompat:1.1.0',
+        andrxCore: 'androidx.core:core-ktx:1.2.0',
+
+        // Network
+        retrofit: "com.squareup.retrofit2:retrofit:$versions.retrofit",
+        retrofitMoshi: "com.squareup.retrofit2:converter-moshi:$versions.retrofit",
+        retrofitRx: "com.squareup.retrofit2:adapter-rxjava2:$versions.retrofit",
+        okhttp: "com.squareup.okhttp3:okhttp:$versions.okhttp",
+        okhttpInterceptor: "com.squareup.okhttp3:logging-interceptor:$versions.okhttp",
+        okio: "com.squareup.okio:okio:$versions.okio",
+        moshi: "com.squareup.moshi:moshi:$versions.moshi",
+        moshiCodegen: "com.squareup.moshi:moshi-kotlin-codegen:$versions.moshi",
+
+        // Rx
+        rxjava: "io.reactivex.rxjava2:rxjava:2.2.17",
+        rxkotlin: "io.reactivex.rxjava2:rxkotlin:2.4.0",
+        rxandroid: "io.reactivex.rxjava2:rxandroid:2.1.1",
+
+        // Date
+        andrThreetenbp: 'com.jakewharton.threetenabp:threetenabp:1.2.2',
+        threetenbp: "org.threeten:threetenbp:1.4.1",
+
+        // Testing
+        junit: 'junit:junit:4.12',
+        andrxJunit: 'androidx.test.ext:junit:1.1.1',
+        andrxEspresso: 'androidx.test.espresso:espresso-core:3.2.0'
+    ]
+}

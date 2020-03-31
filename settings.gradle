@@ -1,2 +1,3 @@
 rootProject.name='trunkstrop'
-include ':app'
+include ':trunkstrop-sample'
+include ':trunkstrop-core'
